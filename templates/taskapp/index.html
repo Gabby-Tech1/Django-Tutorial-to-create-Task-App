@@ -1,0 +1,118 @@
+{% extends 'partials/base.html'%} 
+{% block title %} Home {% endblock %} 
+{% block content %}
+<!-- end of navigation -->
+<div class="container my-4">
+  <div class="row">
+    <div class="col-xl-8">
+      <div class="card shadow">
+        <div class="card-header bg-dark text-light">Statistics</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-xl-4">
+              <div class="card mycard shadow bg-dark text-light">
+                <div class="card-body">
+                  <p>Total Task</p>
+                  <p class="text-center">50</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="card mycard shadow bg-dark text-light">
+                <div class="card-body">
+                  <p>Completed Task</p>
+                  <p class="text-center">10</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="card mycard shadow bg-dark text-light">
+                <div class="card-body">
+                  <p>Uncompleted Task</p>
+                  <p class="text-center">5</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div class="card">
+        <div class="card-header bg-dark text-light">Task Form</div>
+        <div class="card-body">
+          <form class="d-grid">
+            <input class="form-control" placeholder="Enter text" type="text" />
+            <input class="btn btn-success btn-sm mt-3" type="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end of cards -->
+
+<!-- start of graph section -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xl-6">
+      <div class="card">
+        <div class="card-header bg-dark text-light">Graph</div>
+        <div class="card-body">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-6">
+      <div class="row">
+        <ul class="list-group">
+          <li class="list-group-item bg-dark text-light">Task List</li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-8">
+                <p><small>20 November 2022</small></p>
+
+                Visit Grandma
+              </div>
+              <div class="col-4">
+                <a class="btn btn-info btn-sm" href="#">EDIT</a>
+                <a class="btn btn-danger btn-sm" href="#">DELETE</a>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-8">
+                <p><small>20 November 2022</small></p>
+
+                Play football
+              </div>
+              <div class="col-4">
+                <a class="btn btn-info btn-sm" href="#">EDIT</a>
+                <a class="btn btn-danger btn-sm" href="#">DELETE</a>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-8">
+                <p><small>20 November 2022</small></p>
+
+                Singathon mood to be activated
+              </div>
+              <div class="col-4">
+                <a class="btn btn-info btn-sm" href="#">EDIT</a>
+                <a class="btn btn-danger btn-sm" href="#">DELETE</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include 'partials/graph.html' %} 
+{% endblock %}
